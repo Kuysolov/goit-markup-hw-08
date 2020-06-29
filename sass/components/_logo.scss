@@ -1,0 +1,35 @@
+.logo {
+  color: $accentColor;
+  font-family: Raleway, sans-serif;
+  font-weight: bold;
+  font-size: 26px;
+  line-height: 1.2;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    transform: scale(1.1);
+  }
+}
+
+.logo__accent {
+  color: $blackColor;
+}
+
+.page-header__logo {
+  @media screen and (min-width: 768px) {
+    margin-right: 81px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    margin-right: 85px;
+  }
+}
+
+.address-box__logo {
+  margin-bottom: 40px;
+  // display: flex;
+}
+
+.logo__accent--invers {
+  color: $primaryWhiteColor;
+}
