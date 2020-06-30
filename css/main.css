@@ -306,6 +306,13 @@ img {
 @media screen and (min-width: 1200px) {
   .container-footer {
     width: 1200px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+    padding: 48px 15px 28px 15px;
   }
 }
 
@@ -795,6 +802,19 @@ img {
   margin-bottom: 60px;
 }
 
+@media screen and (min-width: 768px) {
+  .address-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 50%;
+  }
+}
+
 .wrapper__logo {
   margin-bottom: 20px;
 }
@@ -831,6 +851,30 @@ footer {
   background: #2f303a;
 }
 
+@media screen and (min-width: 768px) {
+  .tablets-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .connection-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 50%;
+  }
+}
+
 .connection-box__social {
   margin-bottom: 60px;
 }
@@ -845,8 +889,15 @@ footer {
   color: #ffffff;
 }
 
+@media screen and (min-width: 1200px) {
+  .subscribe-box__form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
 .subscribe-box__input {
-  display: block;
   width: 100%;
   height: 50px;
   margin-bottom: 20px;
@@ -856,6 +907,15 @@ footer {
   border: 1px solid rgba(255, 255, 255, 0.3);
   -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+}
+
+@media screen and (min-width: 768px) {
+  .subscribe-box__input {
+    display: block;
+    width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 .subscribe-box__input::-webkit-input-placeholder {
