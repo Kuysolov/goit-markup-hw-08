@@ -6,6 +6,10 @@ footer {
   @media screen and (min-width: 768px) {
     display: flex;
     align-items: baseline;
+
+    @media screen and (min-width: 1200px) {
+      width: 51.3%;
+    }
   }
 }
 .connection-box {
@@ -17,7 +21,13 @@ footer {
 }
 
 .connection-box__social {
-  margin-bottom: 60px;
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 60px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    justify-content: start;
+  }
 }
 
 .subscribe-box__title,
@@ -30,6 +40,16 @@ footer {
   text-transform: uppercase;
 
   color: $primaryWhiteColor;
+
+  @media screen and (min-width: 1200px) {
+    text-align: start;
+  }
+}
+
+.subscribe-box {
+  @media screen and (min-width: 1200px) {
+    width: 48.7%;
+  }
 }
 
 .subscribe-box__form {
@@ -38,13 +58,8 @@ footer {
   }
 }
 .subscribe-box__input {
-  // display: block;
-
-  //   width: 358px;
   width: 100%;
   height: 50px;
-  margin-bottom: 20px;
-  //   margin-right: 10px;
   padding: 15px 16px;
 
   background-color: inherit;
@@ -52,11 +67,20 @@ footer {
   border: 1px solid rgba(255, 255, 255, 0.3);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
-  @media screen and (min-width: 768px) {
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
     display: block;
     width: 450px;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  @media screen and (max-width: 1199px) {
+    margin-bottom: 20px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    display: inline-flex;
+    margin-right: 10px;
   }
 
   &::placeholder {
@@ -74,7 +98,6 @@ footer {
 }
 
 .copyright {
-  // display: flex;
   padding-top: 18px;
   padding-bottom: 21px;
   justify-content: center;

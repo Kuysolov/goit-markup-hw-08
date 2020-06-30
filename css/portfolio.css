@@ -124,6 +124,14 @@ img {
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
+@media screen and (min-width: 1200px) {
+  .button--theme_footer {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+}
+
 .sub-btn {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -644,10 +652,6 @@ img {
   opacity: 1;
 }
 
-.address-box {
-  margin-bottom: 60px;
-}
-
 @media screen and (min-width: 768px) {
   .address-box {
     display: -webkit-box;
@@ -658,6 +662,18 @@ img {
         -ms-flex-direction: column;
             flex-direction: column;
     width: 50%;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .address-box {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .address-box {
+    text-align: start;
   }
 }
 
@@ -708,6 +724,12 @@ footer {
   }
 }
 
+@media screen and (min-width: 768px) and (min-width: 1200px) {
+  .tablets-box {
+    width: 51.3%;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .connection-box {
     display: -webkit-box;
@@ -721,8 +743,18 @@ footer {
   }
 }
 
-.connection-box__social {
-  margin-bottom: 60px;
+@media screen and (max-width: 1199px) {
+  .connection-box__social {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .connection-box__social {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
 }
 
 .subscribe-box__title,
@@ -736,6 +768,19 @@ footer {
 }
 
 @media screen and (min-width: 1200px) {
+  .subscribe-box__title,
+  .connection-box__title {
+    text-align: start;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .subscribe-box {
+    width: 48.7%;
+  }
+}
+
+@media screen and (min-width: 1200px) {
   .subscribe-box__form {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -746,7 +791,6 @@ footer {
 .subscribe-box__input {
   width: 100%;
   height: 50px;
-  margin-bottom: 20px;
   padding: 15px 16px;
   background-color: inherit;
   border-radius: 4px;
@@ -755,12 +799,27 @@ footer {
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1199px) {
   .subscribe-box__input {
     display: block;
     width: 450px;
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+@media screen and (max-width: 1199px) {
+  .subscribe-box__input {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .subscribe-box__input {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    margin-right: 10px;
   }
 }
 
