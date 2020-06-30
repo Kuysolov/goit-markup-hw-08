@@ -38,6 +38,9 @@
 
 .container-footer {
   @extend %container;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  text-align: center;
 
   @media screen and (min-width: 480px) {
     width: 480px;
@@ -50,10 +53,11 @@
   @media screen and (min-width: 1200px) {
     width: 1200px;
   }
-}
-// display: flex;
-//   align-items: baseline;
-//   padding-top: 60px;
-//   padding-bottom: 60px;
 
-// padding: 48px 15px 28px 15px;
+  // display: flex;
+  //   align-items: baseline;
+  //   padding-top: 60px;
+  //   padding-bottom: 60px;
+
+  // padding: 48px 15px 28px 15px;
+}
