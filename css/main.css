@@ -556,8 +556,8 @@ img {
 }
 
 .hero {
-  max-width: 480px;
-  min-height: 400px;
+  max-width: 1600px;
+  min-height: 600px;
   margin-left: auto;
   margin-right: auto;
   background-image: -webkit-gradient(linear, left top, right top, from(rgba(47, 48, 58, 0.8)), to(rgba(47, 48, 58, 0.8))), url("../images/hero.jpg");
