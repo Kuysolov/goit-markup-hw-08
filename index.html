@@ -73,11 +73,8 @@
               aria-label="Переключатель мобильного меню"
               aria-controls="menu-container"
             >
-              <use
-                class="icon-cross"
-                href="./images/sprite.svg#close_40px"
-              ></use>
-              <use class="icon-menu" href="./images/sprite.svg#menu_40px"></use>
+              <use class="icon-cross" href="./images/sprite.svg#cross"></use>
+              <use class="icon-menu" href="./images/sprite.svg#menu"></use>
             </svg>
           </button>
         </div>
@@ -157,17 +154,21 @@
 
       <!-- occupation -->
 
-      <section class="section hidden">
+      <section class="section">
         <div class="container mobile-container">
           <h2 class="container__title">Чем мы занимаемся</h2>
           <ul class="occupation">
             <li class="occupation__item">
               <div class="occupation__image">
                 <img
-                  src="./images/desktop-app.jpg"
+                  srcset="
+                    ./images/desktop-app-370.jpg    1x,
+                    ./images/desktop-app-740@2x.jpg 2x,
+
+                  "
+                  src="./images/desktop-app-370.jpg"
                   alt="картинка с ноутбуком"
                   width="370"
-                  height="294"
                 />
               </div>
               <h2 class="occupation__name">Десктопные приложения</h2>
@@ -175,10 +176,14 @@
             <li class="occupation__item">
               <div class="occupation__image">
                 <img
-                  src="./images/mobile-app.jpg"
+                  srcset="
+                    ./images/mobile-app-370.jpg    1x,
+                    ./images/mobile-app-740@2x.jpg 2x,
+
+                  "
+                  src="./images/mobile-app-370.jpg"
                   alt="картинка с смартфоном"
                   width="370"
-                  height="294"
                 />
               </div>
 
@@ -187,10 +192,14 @@
             <li class="occupation__item">
               <div class="occupation__image">
                 <img
-                  src="./images/design-decisions.jpg"
+                  srcset="
+                    ./images/design-decisions-370.jpg    1x,
+                    ./images/design-decisions-740@2x.jpg 2x,
+
+                  "
+                  src="./images/design-decisions-370.jpg"
                   alt="картинка с монитором"
                   width="370"
-                  height="294"
                 />
               </div>
               <h2 class="occupation__name">Дизайнерские решения</h2>
@@ -206,13 +215,36 @@
           <h2 class="container__title">Наша команда</h2>
           <ul class="developers">
             <li class="developers__item">
-              <img
-                src="./images/john-smith.jpg"
-                alt="John Smith"
-                width="270"
-                height="260"
-                class="developers__image"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/kucherenko-450.jpg    1x,
+                    ./images/kucherenko-900@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./images/kucherenko-354.jpg        1x,
+                    ./images/kucherenko-708@2x.jpg.jpg 2x
+                  "
+                  media="(max-width: 1199px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./images/kucherenko-270.jpg    1x,
+                    ./images/kucherenko-540@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpg"
+                />
+                <img
+                  src="./images/kucherenko-450.jpg "
+                  alt="Николай Кучеренко"
+                />
+              </picture>
               <div class="developers__meta">
                 <h3 class="developers__name">Николай Кучеренко</h3>
                 <p class="developers__vocation">Product Designer</p>
@@ -265,13 +297,33 @@
               </div>
             </li>
             <li class="developers__item">
-              <img
-                src="./images/marta-stewart.jpg"
-                alt="Marta Stewart"
-                width="270"
-                height="260"
-                class="developers__image"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/ivanova-450.jpg    1x,
+                    ./images/ivanova-900@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./images/ivanova-354.jpg        1x,
+                    ./images/ivanova-708@2x.jpg.jpg 2x
+                  "
+                  media="(max-width: 1199px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./images/ivanova-270.jpg    1x,
+                    ./images/ivanova-540@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpg"
+                />
+                <img src="./images/ivanova-450.jpg " alt="Ольга Иванова" />
+              </picture>
               <div class="developers__meta">
                 <h3 class="developers__name">Ольга Иванова</h3>
                 <p class="developers__vocation">Frontend Developer</p>
@@ -324,13 +376,36 @@
               </div>
             </li>
             <li class="developers__item">
-              <img
-                src="./images/robert-jakis.jpg"
-                alt="Robert Jakis"
-                width="270"
-                height="260"
-                class="developers__image"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/schevchenko-450.jpg    1x,
+                    ./images/schevchenko-900@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./images/schevchenko-354.jpg        1x,
+                    ./images/schevchenko-708@2x.jpg.jpg 2x
+                  "
+                  media="(max-width: 1199px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./images/schevchenko-270.jpg    1x,
+                    ./images/schevchenko-540@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpg"
+                />
+                <img
+                  src="./images/schevchenko-450.jpg "
+                  alt="Андрей Шевченко"
+                />
+              </picture>
               <div class="developers__meta">
                 <h3 class="developers__name">Андрей Шевченко</h3>
                 <p class="developers__vocation">Marketing</p>
@@ -383,13 +458,33 @@
               </div>
             </li>
             <li class="developers__item">
-              <img
-                src="./images/martin-doe.jpg"
-                alt="Martin Doe"
-                width="270"
-                height="260"
-                class="developers__image"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./images/nikolaev-450.jpg    1x,
+                    ./images/nikolaev-900@2x.jpg 2x
+                  "
+                  media="(max-width: 767px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./images/nikolaev-354.jpg        1x,
+                    ./images/nikolaev-708@2x.jpg.jpg 2x
+                  "
+                  media="(max-width: 1199px)"
+                  type="image/jpg"
+                />
+                <source
+                  srcset="
+                    ./images/nikolaev-270.jpg    1x,
+                    ./images/nikolaev-540@2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                  type="image/jpg"
+                />
+                <img src="./images/nikolaev-450.jpg " alt="Иван Николаев" />
+              </picture>
               <div class="developers__meta">
                 <h3 class="developers__name">Иван Николаев</h3>
                 <p class="developers__vocation">UI Designer</p>
@@ -654,8 +749,7 @@
           rows="5"
           cols="45"
           placeholder="Оставьте комментарий"
-        >
-        </textarea>
+        ></textarea>
         <label class="form__accept">
           <input class="form__checkbox" type="checkbox" name="accept" />
           <span class="form__checkbox-icon"></span>
