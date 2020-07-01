@@ -1,7 +1,7 @@
 .hero {
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin-left: auto;
   margin-right: auto;
   background-position: center;
@@ -14,13 +14,15 @@
 
   background-color: gainsboro;
 
-  background-image: linear-gradient(
-      to right,
-      rgba(47, 48, 58, 0.8),
-      rgba(47, 48, 58, 0.8)
-    ),
-    url('../images/hero-480.jpg');
-  background-size: 480px 400px;
+  @media screen and (max-width: 479px) {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.8),
+        rgba(47, 48, 58, 0.8)
+      ),
+      url('../images/hero-480.jpg');
+    background-size: 480px 400px;
+  }
 }
 
 @media screen and (min-device-pixel-ratio: 2),
@@ -47,7 +49,7 @@
   }
 }
 
-@media screen and (min-width: 480px) and (min-device-pixel-ratio: 2),
+@media screen and (min-width: 768px) and (min-device-pixel-ratio: 2),
   screen and (min-resolution: 192dpi),
   screen and (min-resolution: 2dppx) {
   .hero {
@@ -85,8 +87,8 @@
   }
 }
 
-.hero-container {
-}
+// .hero-container {
+// }
 
 .hero-title {
   margin-bottom: 30px;
@@ -101,31 +103,5 @@
   @media screen and (min-width: 1200px) {
     font-size: 44px;
     line-height: 1.36;
-  }
-}
-
-.box {
-  outline: 2px solid red;
-  width: 320px;
-  height: 240px;
-  background-image: url('https://picsum.photos/id/237/320/240');
-  background-size: 320px 240px;
-}
-
-/* 2x-экраны, изображение 640x480 */
-@media screen and (min-device-pixel-ratio: 2),
-  screen and (min-resolution: 192dpi),
-  screen and (min-resolution: 2dppx) {
-  .box {
-    background-image: url('https://picsum.photos/id/237/640/480');
-  }
-}
-
-/* 3x-экраны, изображение 960x720 */
-@media screen and (min-device-pixel-ratio: 3),
-  screen and (min-resolution: 3dppx),
-  screen and (min-resolution: 288dpi), {
-  .box {
-    background-image: url('https://picsum.photos/id/237/960/720');
   }
 }
