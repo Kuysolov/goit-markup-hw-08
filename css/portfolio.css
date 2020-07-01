@@ -94,6 +94,18 @@ img {
           transform: scale(1.1);
 }
 
+@media screen and (min-width: 768px) {
+  .page-header__logo {
+    margin-right: 81px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .page-header__logo {
+    margin-right: 85px;
+  }
+}
+
 .logo__accent {
   color: #000000;
 }
@@ -381,8 +393,9 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-preferred-size: 507px;
-        flex-basis: 507px;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
@@ -396,8 +409,9 @@ img {
 
 @media screen and (min-width: 1200px) {
   .menu-container {
-    -ms-flex-preferred-size: 935px;
-        flex-basis: 935px;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
   }
 }
 

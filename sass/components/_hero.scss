@@ -1,10 +1,17 @@
 .hero {
-  // max-width: 480px;
-  // min-height: 400px;
-  max-width: 1600px;
-  min-height: 600px;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
   margin-left: auto;
   margin-right: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  max-width: 1600px;
+  min-height: 400px;
+
   background-color: gainsboro;
 
   background-image: linear-gradient(
@@ -13,83 +20,112 @@
       rgba(47, 48, 58, 0.8)
     ),
     url('../images/hero-480.jpg');
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  background-size: 480px 400px;
+}
 
-  @media (min-resolution: 2dppx) {
-    .overlay {
-      background-image: linear-gradient(
-          to right,
-          rgba(47, 48, 58, 0.8),
-          rgba(47, 48, 58, 0.8)
-        ),
-        url('../images/hero-960@2x.jpg');
-    }
+@media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.8),
+        rgba(47, 48, 58, 0.8)
+      ),
+      url('../images/hero-960@2x.jpg');
   }
+}
 
-  @media screen and (min-width: 480px) {
-    .overlay {
-      background-image: linear-gradient(
-          to right,
-          rgba(47, 48, 58, 0.8),
-          rgba(47, 48, 58, 0.8)
-        ),
-        url('../images/hero-768.jpg');
-    }
+@media screen and (min-width: 480px) {
+  .hero {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.8),
+        rgba(47, 48, 58, 0.8)
+      ),
+      url('../images/hero-768.jpg');
   }
+}
 
-  @media screen and (min-width: 480px) and (min-resolution: 2dppx) {
-    .overlay {
-      background-image: linear-gradient(
-          to right,
-          rgba(47, 48, 58, 0.8),
-          rgba(47, 48, 58, 0.8)
-        ),
-        url('../images/hero-1536@2x.jpg');
-    }
+@media screen and (min-width: 480px) and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.8),
+        rgba(47, 48, 58, 0.8)
+      ),
+      url('../images/hero-1536@2x.jpg');
   }
+}
+
+@media screen and (min-width: 1200px) {
+  .hero {
+    height: 600px;
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.8),
+        rgba(47, 48, 58, 0.8)
+      ),
+      url('../images/hero-1600.jpg');
+  }
+}
+
+@media screen and (min-width: 1200px) and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(
+        to right,
+        rgba(47, 48, 58, 0.8),
+        rgba(47, 48, 58, 0.8)
+      ),
+      url('../images/hero-3200@2x.jpg');
+  }
+}
+
+.hero-container {
+}
+
+.hero-title {
+  margin-bottom: 30px;
+
+  font-weight: 900;
+  font-size: 26px;
+  line-height: 1.62;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $primaryWhiteColor;
 
   @media screen and (min-width: 1200px) {
-    .overlay {
-      height: 600px;
-      background-image: linear-gradient(
-          to right,
-          rgba(47, 48, 58, 0.8),
-          rgba(47, 48, 58, 0.8)
-        ),
-        url('../images/hero-1600.jpg');
-    }
+    font-size: 44px;
+    line-height: 1.36;
   }
+}
 
-  @media screen and (min-width: 1200px) and (min-resolution: 2dppx) {
-    .overlay {
-      background-image: linear-gradient(
-          to right,
-          rgba(47, 48, 58, 0.8),
-          rgba(47, 48, 58, 0.8)
-        ),
-        url('../images/hero-3200@2x.jpg');
-    }
+.box {
+  outline: 2px solid red;
+  width: 320px;
+  height: 240px;
+  background-image: url('https://picsum.photos/id/237/320/240');
+  background-size: 320px 240px;
+}
+
+/* 2x-экраны, изображение 640x480 */
+@media screen and (min-device-pixel-ratio: 2),
+  screen and (min-resolution: 192dpi),
+  screen and (min-resolution: 2dppx) {
+  .box {
+    background-image: url('https://picsum.photos/id/237/640/480');
   }
+}
 
-  &-container {
-    padding: 118px 0 118px 0;
-  }
-
-  &-title {
-    margin-bottom: 30px;
-
-    font-weight: 900;
-    font-size: 26px;
-    line-height: 1.62;
-    letter-spacing: 0.06em;
-    text-transform: uppercase;
-    color: $primaryWhiteColor;
-
-    @media screen and (min-width: 768px) {
-      font-size: 44px;
-      line-height: 1.36;
-    }
+/* 3x-экраны, изображение 960x720 */
+@media screen and (min-device-pixel-ratio: 3),
+  screen and (min-resolution: 3dppx),
+  screen and (min-resolution: 288dpi), {
+  .box {
+    background-image: url('https://picsum.photos/id/237/960/720');
   }
 }

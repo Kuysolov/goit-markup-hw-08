@@ -41,7 +41,7 @@
 
   @media screen and (min-width: 768px) {
     display: flex;
-    flex-basis: 507px;
+    flex-grow: 1;
     align-items: center;
     justify-content: space-between;
 
@@ -50,7 +50,7 @@
   }
 
   @media screen and (min-width: 1200px) {
-    flex-basis: 935px;
+    flex-grow: 1;
   }
 }
 
