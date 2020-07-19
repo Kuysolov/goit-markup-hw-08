@@ -556,13 +556,31 @@ img {
   margin: 0;
   padding: 0;
   border: none;
-  background-color: lime;
+  background-color: inherit;
 }
 
 @media screen and (min-width: 768px) {
   .menu-button {
     display: none;
   }
+}
+
+.menu-button:hover .icon-menu {
+  color: #2196f3;
+}
+
+.menu-button:hover .icon-cross {
+  color: #2196f3;
+}
+
+.icon-cross,
+.icon-menu {
+  fill: currentColor;
+  color: #212121;
+}
+
+.icon-menu:focus {
+  color: #2196f3;
 }
 
 .menu-button .icon-cross {
